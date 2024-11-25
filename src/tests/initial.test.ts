@@ -8,3 +8,9 @@ describe("GET initial", () => {
     expect(res.body.message).toBe("Working");
   });
 });
+
+describe("TEST TO FAIL", () => {
+  it("should fail", async () => {
+    expect(true).toBe(false);
+  });
+});
