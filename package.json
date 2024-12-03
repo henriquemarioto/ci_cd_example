@@ -28,7 +28,7 @@
   "name": "ci_cd_example",
   "description": "Example of using CI/CD",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "keywords": [],
   "author": "henriquemarioto",
   "license": "ISC"
