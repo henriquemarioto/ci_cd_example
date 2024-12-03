@@ -1,7 +1,3 @@
-import app from "./app";
+import App from "./app";
 
-const PORT = 3333
-
-app.listen(PORT, () => {
-  console.log(`Running at port ${PORT}`)
-})
+App.listen()

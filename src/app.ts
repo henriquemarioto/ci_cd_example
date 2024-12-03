@@ -1,11 +1,43 @@
-import express from "express";
+import express, { Express, Router } from "express";
+import Controller from "./shared/interfaces/Controller.interface";
+import MathController from "./math/math.controller";
 
-const app = express()
+class App {
+  public app: Express;
+  public port: number;
 
-app.use(express.json())
+  constructor(controllers: Controller[], port: number) {
+    this.app = express();
+    this.port = port;
 
-app.get("", (req, res) => {
-  res.status(200).json({ message: "Working" })
-})
+    this.initializeMiddlewares();
+    this.initializeControllers(controllers);
+  }
 
-export default app
+  public getServer() {
+    return this.app;
+  }
+
+  private initializeMiddlewares() {
+    this.app.use(express.json());
+  }
+
+  private initializeControllers(controllers: Controller[]) {
+    this.app.use(
+      Router().get("", (req, res) => {
+        res.status(200).json({ message: "Working" });
+      })
+    );
+    controllers.forEach((controller) => {
+      this.app.use("/", controller.router);
+    });
+  }
+
+  public listen() {
+    this.app.listen(this.port, () => {
+      console.log(`App listening on the port ${this.port}`);
+    });
+  }
+}
+
+export default new App([new MathController()], 3333);

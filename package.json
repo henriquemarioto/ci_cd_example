@@ -5,6 +5,8 @@
     "lint": "npx eslint ."
   },
   "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "cross-env": "^7.0.3",
     "express": "^4.21.1",
     "jest": "^29.7.0",
