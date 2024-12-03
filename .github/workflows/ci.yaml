@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  Lint_Tests_Build:
     runs-on: ubuntu-latest
 
     steps:
