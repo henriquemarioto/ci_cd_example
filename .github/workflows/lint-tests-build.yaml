@@ -1,6 +1,6 @@
 name: Lint, test and build
 on:
-  push:
+  pull_request:
     branches:
       - '**'
 jobs:
