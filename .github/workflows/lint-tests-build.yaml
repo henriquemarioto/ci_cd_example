@@ -1,5 +1,8 @@
 name: Lint, test and build
 on:
+  push:
+    branches:
+      - '**'
   pull_request:
     branches:
       - '**'
