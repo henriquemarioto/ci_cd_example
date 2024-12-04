@@ -84,7 +84,7 @@ The CI/CD pipeline is configured in the `.github/workflows/` directory and consi
 
 1. **Lint, Tests, and Build**:
    - **Workflow file**: `lint-tests-build.yml`
-   - This workflow handles code quality checks (linting), runs unit tests to ensure the application functions as expected, and builds the application for deployment.
+   - This workflow handles code quality checks (linting), runs tests to ensure the application functions as expected, and builds the application for deployment.
 
 2. **Preview Deployment**:
    - **Workflow file**: `preview.yml`
